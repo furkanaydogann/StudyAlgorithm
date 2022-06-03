@@ -1,13 +1,18 @@
 # Reverse String
 
-r = []
+#You must do this by modifying the input array in-place with O(1) extra memory
+#Input: s = ["h","e","l","l","o"]
+#Output: ["o","l","l","e","h"]
 def reverseString(s):
     t = len(s)-1
-    while t >= 0:
-        r.append(s[t])
+    i = 0
+    while t >= i:
+        x = s[i]
+        s[i] = s[t]
+        s[t] = x
         t = t - 1
-
-    return r
+        i = i + 1
+    return s
 
 #s = ["H","a","n","n","a","h"]
 s = ["h","e","l","l","o"]
