@@ -7,15 +7,19 @@
 
 def fizzbuzz(n):
     i = 1
-    while i <= n:
+    c = n
+    n = []
+    while i <= c:
         if i % 3 == 0 and i % 5 == 0:
-            print("FizzBuzz")
+            n.append("FizzBuzz")
         elif i % 3 == 0:
-            print("Fizz")
+            n.append("Fizz")
         elif i % 5 == 0:
-            print("Buzz")
+            n.append("Buzz")
         else:
-            print(i)
+            n.append(str(i))
         i = i+1
+    return n
 
-fizzbuzz(int(input()))
+n = 20
+print(fizzbuzz(n))
